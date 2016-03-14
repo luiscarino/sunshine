@@ -1,0 +1,70 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">Sunshine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_location">Location</string>
+    <string name="action_share">Share</string>
+    <string name="title_activity_forecast_detail">Forecast</string>
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_preferences">Preferences</string>
+
+
+    <!--Preferences strings-->
+    <string name="pref_location_default">94043</string>
+    <string name="pref_location_key">location</string>
+    <string name="pref_location_title">Location</string>
+
+    <string name="pref_unit_key">unit</string>
+    <string name="pref_unit_title">Units</string>
+    <string name="pref_unit_default">metric</string>
+
+    <!-- Value in SharedPreferences for metric temperature unit option [CHAR LIMIT=NONE] -->
+    <string name="pref_units_metric" translatable="false">metric</string>
+
+
+    <!-- Value in SharedPreferences for imperial temperature unit option [CHAR LIMIT=NONE] -->
+    <string name="pref_units_imperial" translatable="false">imperial</string>
+    <string name="content_desc_forecast">forecast</string>
+
+    <string-array name="pref_units_array">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+
+    <string-array name="pref_units_key_array">
+        <item>metric</item>
+        <item>imperial</item>
+    </string-array>
+
+    <!-- Date label when displaying today's weather forecast [CHAR LIMIT=20] -->
+    <string name="today">Today</string>
+
+    <!-- Date label when displaying tomorrow's weather forecast [CHAR LIMIT=20] -->
+    <string name="tomorrow">Tomorrow</string>
+
+    <!-- Date format for displaying day of week and date (i.e. Mon Jun 1) [CHAR LIMIT=20] -->
+    <string name="format_full_friendly_date">
+        <xliff:g id="day">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g>
+    </string>
+
+    <string name="format_temperature">
+        <xliff:g id="temp">%1.0f</xliff:g>\u00B0
+    </string>
+
+    <!-- Date format for displaying day of week and date (i.e. Humidity: 30 %)-->
+    <string name="format_humidity">
+        Humidity: <xliff:g id="speed">%1$s</xliff:g> %%
+    </string>
+
+    <!-- Format for displaying wind speed (i.e. Wind: : 6km/H NW )-->
+    <string name="format_wind">
+        Wind: <xliff:g id="speed">%1$s</xliff:g>km/H NW
+    </string>
+
+    <!-- Format for displaying pressure (i.e. Pressure: : 1014 hPa )-->
+    <string name="format_pressure">
+        Pressure: <xliff:g id="value">%1$s</xliff:g> hPa
+    </string>
+
+</resources>

@@ -1,0 +1,115 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_normal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_day"
+                    style="@style/titleDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="TODAY" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/subheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="JUNE 24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_max_temp"
+                    style="@style/maxTempDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="21" />
+
+                <TextView
+                    android:id="@+id/tv_min_temp"
+                    style="@style/minTempDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="15" />
+
+                <TextView
+                    android:id="@+id/tv_humidity"
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    tools:text="HUMIDITY: 84%" />
+
+                <TextView
+                    android:id="@+id/tv_wind"
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    tools:text="WIND: 6km/H NW" />
+
+                <TextView
+                    android:id="@+id/tv_max_pressure"
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="PRESSURE: 1012 hPa" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_forecast_desc"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/content_desc_forecast" />
+
+                <TextView
+                    android:id="@+id/tv_forecast_desc"
+                    style="@style/subheading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    tools:text="CLEAr" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

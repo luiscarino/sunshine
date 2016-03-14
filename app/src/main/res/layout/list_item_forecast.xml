@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/touch_selector"
+    android:gravity="center"
+    android:paddingBottom="@dimen/margin_normal"
+    android:paddingTop="@dimen/margin_normal">
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/iv_forecast"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:contentDescription="@string/content_desc_forecast"
+            tools:src="@mipmap/sunny" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/margin_zero"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_zero"
+        android:paddingStart="@dimen/margin_normal">
+
+        <TextView
+            android:id="@+id/tv_day"
+            style="@style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="TOMORROW" />
+
+        <TextView
+            android:id="@+id/tv_forecast_desc"
+            style="@style/body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="CLEAR" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/margin_normal"
+        android:paddingLeft="@dimen/margin_zero"
+        android:paddingRight="@dimen/margin_normal"
+        android:paddingStart="@dimen/margin_zero">
+
+        <TextView
+            android:id="@+id/tv_max_temp"
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/tv_min_temp"
+            style="@style/body1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:text="18" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

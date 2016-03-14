@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/my_toolbar" />
+
+    <fragment
+        android:id="@+id/preferences_fragment"
+        android:name="com.example.lucarino.sunshine.PreferencesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_toolbar" />
+
+
+</RelativeLayout>
+

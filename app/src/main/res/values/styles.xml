@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/primary</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/accent</item>
+
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+
+    <!-- main activity action bar styles -->
+    <style name="Toolbar.Solid.Sunshine" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+    </style>
+
+
+
+    <style name="ForecastHeader" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="ForecastHeaderToday" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="textBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue_gb</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="title" parent="textBase">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="titleDetail" parent="textBase">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="maxTempTitle" parent="textBase">
+        <item name="android:textSize">72sp</item>
+    </style>
+
+    <style name="maxTempDetail" parent="textBase">
+        <item name="android:textSize">96sp</item>
+    </style>
+
+    <style name="minTempTitle" parent="textBase">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="minTempDetail" parent="textBase">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="subheading" parent="textBase">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="subheading2" parent="textBase">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="body2" parent="textBase">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="body1" parent="textBase">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="caption" parent="textBase">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ForecastListStyle" >
+
+    </style>
+
+</resources>
