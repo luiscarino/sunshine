@@ -40,14 +40,12 @@
                 android:value="com.example.lucarino.sunshine.MainActivity" />
         </activity>
 
-
-        <service android:name=".ForecastService"
-            />
         <provider
             android:name=".util.WeatherProvider"
             android:authorities="com.example.lucarino.sunshine.app"
             android:enabled="true"
             android:exported="true" />
+        <service android:name=".service.SunshineService"/>
     </application>
 
 </manifest>
