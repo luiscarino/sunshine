@@ -1,8 +1,10 @@
 package com.example.lucarino.sunshine.service;
 
 import android.app.IntentService;
+import android.content.BroadcastReceiver;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -103,6 +105,8 @@ public class SunshineService extends IntentService {
                 return;
             }
             forecastJsonStr = buffer.toString();
+            Log.d(LOG_TAG, "onHandleIntent - Response : " +forecastJsonStr);
+
             getWeatherDataFromJson(forecastJsonStr, locationQuery);
         } catch (IOException e) {
             Log.e(LOG_TAG, "Error ", e);
@@ -320,5 +324,19 @@ public class SunshineService extends IntentService {
         locationCursor.close();
         // Wait, that worked?  Yes!
         return locationId;
+    }
+
+    public static class AlarmReceiver extends BroadcastReceiver {
+
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            // start fetch weather service
+            Intent sendIntent = new Intent(context, SunshineService.class);
+            sendIntent.putExtra(SunshineService.LOCATION_QUERY_EXTRA, intent.getStringExtra(LOCATION_QUERY_EXTRA));
+            context.startService(sendIntent);
+
+        }
     }
 }

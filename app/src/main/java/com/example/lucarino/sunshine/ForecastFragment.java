@@ -1,6 +1,8 @@
 package com.example.lucarino.sunshine;
 
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -177,9 +179,16 @@ public class ForecastFragment extends Fragment implements android.support.v4.app
      */
     public void updateForecastWeather() {
         final String location = Utility.getPreferredLocation(getActivity());
-        Intent intent = new Intent(getActivity(), SunshineService.class);
-        intent.putExtra(SunshineService.LOCATION_QUERY_EXTRA, location);
-        getActivity().startService(intent);
+        final int TRIGGER_AT_MILLIS = 5*1000;
+        // create the intent to be triggered by the AM.
+        Intent intentReceiver = new Intent(getActivity(), SunshineService.AlarmReceiver.class);
+        intentReceiver.putExtra(SunshineService.LOCATION_QUERY_EXTRA, location);
+        // wrapping the intent in a PendingIntent
+        PendingIntent alarmIntent = PendingIntent.getBroadcast(getContext(), 0 , intentReceiver, 0);
+        // set the alarm
+        AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, TRIGGER_AT_MILLIS, alarmIntent);
+
     }
 
     /**
