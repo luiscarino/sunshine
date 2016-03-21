@@ -67,4 +67,10 @@
         Pressure: <xliff:g id="value">%1$s</xliff:g> hPa
     </string>
 
+
+    <!-- Account type (for sync-adapter authenticator) -->
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">sunshine.example.com</string>
+    <string name="content_authority">com.example.lucarino.sunshine.app</string>
+
 </resources>
