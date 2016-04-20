@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.lucarino.sunshine.sync.SunshineSyncAdapter;
+
 public class MainActivity extends AppCompatActivity implements ForecastFragment.OnForecastListener {
 
     private final String LOG_TAG = getClass().getName();
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
         if (null != ff) {
             ff.setUseTodayLayout(!mTwoPane);
         }
+
+        SunshineSyncAdapter.initializeSyncAdapter(this);
 
     }
 
