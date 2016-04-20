@@ -7,6 +7,8 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 
+import com.example.lucarino.sunshine.sync.SunshineSyncAdapter;
+
 /**
  * Created by luiscarino on 3/13/16.
  */
@@ -78,6 +80,9 @@ public class PreferencesFragment extends PreferenceFragment implements Preferenc
             // For other preferences, set the summary to the value's simple string representation.
             preference.setSummary(stringValue);
         }
+
+        SunshineSyncAdapter.syncImmediately(getActivity());
+
 
         return true;
     }

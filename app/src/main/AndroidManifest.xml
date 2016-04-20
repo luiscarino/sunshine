@@ -52,9 +52,6 @@
             android:authorities="@string/content_authority"
             android:enabled="true"
             android:exported="true" />
-        <service android:name=".service.SunshineService"/>
-        <receiver android:name=".service.SunshineService$AlarmReceiver"
-            android:enabled="true"/>
 
         <!-- SyncAdapter's dummy authentication service -->
         <service

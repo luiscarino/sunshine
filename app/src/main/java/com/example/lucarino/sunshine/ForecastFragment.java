@@ -1,10 +1,7 @@
 package com.example.lucarino.sunshine;
 
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
@@ -23,7 +20,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.lucarino.sunshine.data.WeatherContract;
-import com.example.lucarino.sunshine.service.SunshineService;
+import com.example.lucarino.sunshine.sync.SunshineSyncAdapter;
 
 
 /**
@@ -178,16 +175,17 @@ public class ForecastFragment extends Fragment implements android.support.v4.app
      * Executes an async call to fetch forecast.
      */
     public void updateForecastWeather() {
-        final String location = Utility.getPreferredLocation(getActivity());
-        final int TRIGGER_AT_MILLIS = 5*1000;
-        // create the intent to be triggered by the AM.
-        Intent intentReceiver = new Intent(getActivity(), SunshineService.AlarmReceiver.class);
-        intentReceiver.putExtra(SunshineService.LOCATION_QUERY_EXTRA, location);
-        // wrapping the intent in a PendingIntent
-        PendingIntent alarmIntent = PendingIntent.getBroadcast(getContext(), 0 , intentReceiver, 0);
-        // set the alarm
-        AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, TRIGGER_AT_MILLIS, alarmIntent);
+        SunshineSyncAdapter.syncImmediately(getContext());
+//        final String location = Utility.getPreferredLocation(getActivity());
+//        final int TRIGGER_AT_MILLIS = 5*1000;
+//        // create the intent to be triggered by the AM.
+//        Intent intentReceiver = new Intent(getActivity(), SunshineService.AlarmReceiver.class);
+//        intentReceiver.putExtra(SunshineService.LOCATION_QUERY_EXTRA, location);
+//        // wrapping the intent in a PendingIntent
+//        PendingIntent alarmIntent = PendingIntent.getBroadcast(getContext(), 0 , intentReceiver, 0);
+//        // set the alarm
+//        AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+//        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, TRIGGER_AT_MILLIS, alarmIntent);
 
     }
 
